@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100    // default: 10; 24 triggers × 100 ≈ previous 10 × 240
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 180    // default: 10; 24 triggers × 180
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>

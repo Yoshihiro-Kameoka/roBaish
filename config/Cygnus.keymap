@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 180    // default: 10; 24 triggers × 180
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 240    // default: 10; keep speed; 10 triggers × 240
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -109,7 +109,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
-            tap-ms = <30>;
+            tap-ms = <20>;
         };
 
         tog_on: toggle_layer_on_only {

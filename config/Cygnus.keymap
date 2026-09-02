@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 180    // default: 10; a bit slower than 240
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 150    // default: 10; a bit slower than 180
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -112,6 +112,15 @@
             tap-ms = <20>;
         };
 
+        encoder_msc_left_right: encoder_msc_left_right {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_MSC_LEFT_RIGHT";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+
+            tap-ms = <20>;
+        };
+
         tog_on: toggle_layer_on_only {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
@@ -191,6 +200,10 @@
 &kp LEFT_SHIFT  &kp LC(X)       &kp LC(C)       &kp LC(V)  &kp LC(B)      &trans      &trans  &kp HOME                &trans    &trans          &trans    &kp END
 &trans          &trans          &trans          &trans     &trans         &trans      &trans  &trans                                                      &trans
             >;
+
+            sensor-bindings =
+                <&encoder_msc_left_right>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         // 5: Mac mouse（同じ配置。修飾を Gui/Mac 相当へ）
@@ -202,6 +215,10 @@
 &kp LEFT_SHIFT  &kp LG(X)       &kp LG(C)       &kp LG(V)  &kp LG(B)                 &trans      &trans  &kp HOME            &trans    &trans            &trans    &kp END
 &trans          &trans          &trans          &trans     &trans                    &trans      &trans  &trans                                                    &trans
             >;
+
+            sensor-bindings =
+                <&encoder_msc_left_right>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         // 6: Windows scroll（キーは win_mouse と同内容。ボールだけホイール化）

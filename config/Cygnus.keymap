@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 150    // default: 10; a bit slower than 180
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 63     // 24 triggers × 63 ≈ previous 10 × 150 per turn
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -121,7 +121,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
-            tap-ms = <20>;
+            tap-ms = <30>;
         };
 
         encoder_msc_left_right: encoder_msc_left_right {
@@ -130,7 +130,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
 
-            tap-ms = <20>;
+            tap-ms = <30>;
         };
 
         tog_on: toggle_layer_on_only {

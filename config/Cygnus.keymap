@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100    // Cygnus/shakupan 同等（24 triggers × 100）
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 80     // エンコーダのみ一段遅く（tap-ms 16 は維持）
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>

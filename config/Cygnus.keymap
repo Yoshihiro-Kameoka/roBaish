@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 80     // エンコーダのみ少し遅く（ボールは 1/100 のまま）
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 60     // 量を落とす。tap-ms は 16 のまま（35 だと 1ノッチが伸びて速くなる）
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -121,7 +121,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
-            tap-ms = <35>;
+            tap-ms = <16>;
         };
 
         encoder_msc_left_right: encoder_msc_left_right {
@@ -130,7 +130,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
 
-            tap-ms = <35>;
+            tap-ms = <16>;
         };
 
         tog_on: toggle_layer_on_only {

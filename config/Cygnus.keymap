@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 60     // 量を落とす。tap-ms は 16 のまま（35 だと 1ノッチが伸びて速くなる）
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100    // Cygnus/shakupan 同等（24 triggers × 100）
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
